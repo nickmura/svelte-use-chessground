@@ -1,11 +1,12 @@
 <script lang="ts">
+	//@ts-nocheck
 	import { Chessground, cgStylesHelper } from '$lib/index';
 	import '$lib/cgstyles/chessground.css';
 	import { Chess } from 'chess.js';
 	import { randomMove, validMovesAsDests } from './_utils';
 	import type { Config, Api } from '$lib/index';
 
-	let chess = Chess();
+	let chess = new Chess();
 
 	let cgApi: Api;
 	let config: Config = {
